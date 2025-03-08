@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    min-height: 100vh;
+    width: 100%;
+    background-color:black;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.form{
+    height: 100%;
+    width: 80%;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+.header div{
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    gap: 5px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+form div input{
+    background-color: white;
+    font-size: 16.5px;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+.datee input{
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+.timee{
+    padding: 4px;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+.stdData{
+    margin-top: 40px;
+}
+th{
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 800;
+    width: 150px;
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+    padding: 8px 5px;
+}
+td{
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 600;
+    width: 150px;
+    border: 1px solid rgb(187, 186, 186);
+    text-align: center;
+    padding: 8px 0px;
+}
+.attend{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+}
+.submit{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 10px 45px;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    color: white;
+    background-color: #ff1212;
+}

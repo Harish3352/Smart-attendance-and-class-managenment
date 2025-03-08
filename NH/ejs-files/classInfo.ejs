@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/classInfo.css">
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="subInfo">
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Lecture</th>
+                        <th>Sem</th>
+                        <th>Sub-Code</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr>
+                        <% for( let index = 0; index < SubInfo.length; index++ ) { %>
+                            <td><%= SubInfo[index] %></td>
+                        <% } %>
+                    </tr>
+            </table>
+            </div>
+            <div class="stdInfo">
+                <div class="specificStd">
+                    <table>
+                            <% for( let index = 0; index < StdInfo.length; index++ ) { %>
+                                <tr>
+                                    <td><%= StdInfo[index] %></td>
+                                </tr>
+                            <% } %>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

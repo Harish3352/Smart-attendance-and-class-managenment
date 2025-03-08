@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View students</title>
+    <link rel="stylesheet" href="/students.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <div class="round"><%= adminName[0] %></div>
+                <div class="text">WelCome <br><%= adminDept %> / Admin : <%= adminName %></div>
+            </div>
+            <a href="/logout" class="button">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="student">
+                <h3>Student-Details</h3>
+                <% for(let index = 3; index <= 8; index++ ) { %>
+                    <a href="/admin/student-details?sem=<%= index %>">sem - <%= index %></a>
+                <% } %>
+            </div>
+            <div class="staff">
+                <h3>Staff-Details</h3>
+                <a href="/admin/Staff-details?type=teaching">Teaching</a>
+                <a href="/admin/Staff-details?type=non-teaching">Non-teaching</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

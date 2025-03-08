@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/studentPage.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <div class="round"><%= result[0].name[0] %></div>
+                <div class="text">WelCome <br><%= result[0].dept %> / Student : <%= result[0].name %></div>
+            </div>
+            <a href="/logout" class="button">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="heading">
+                <h2>Subjects for you</h2>
+                <h3>
+                    <pre>
+                        Name :  <b><%= result[0].name %></b>
+                        USN   :  <b><%= result[0].usn %></b>
+                        SEM   :  <b><%= result[0].sem %> sem</b>
+                    </pre>
+                </h3>
+            </div>
+            <div class="subjects">
+                <table>
+                    <tr>
+                        <th>Lecture</th>
+                        <th>Sub-name</th>
+                        <th>Sub-code</th>
+                        <th>Attendence</th>
+                    </tr>
+                    <% for( let index = 0; index < rest.length; index++ ) { %>
+                            <tr>
+                                <td><%= rest[index].lecture %></td>
+                                <td><%= rest[index].subname %></td>
+                                <td><%= rest[index].subcode %></td>
+                                <td class="go"><a href="/student/attendenc?usn=<%= result[0].usn %>&subcode=<%= rest[index].subcode %>" >View</a></td>
+                            </tr>
+                    <% } %>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/class.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <div class="round"><%= rest[0].name[0] %></div>
+                <div class="text">WelCome <br><%= rest[0].dept %> / Staff : <%= rest[0].name %> </div>
+            </div>
+            <a href="/logout" class="button">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="heading">
+                <h2>ATTENDENCE</h2>
+                <h3>
+                    <pre>
+                        Sem            :  <b><%= result[0].sem %></b>
+                        Sub-name   :  <b><%= result[0].subname %></b>
+                        Sub-Code   :  <b><%= result[0].subcode %>
+                    </pre>
+                </h3>
+            </div>
+            <div class="contentBox">
+                <div class="addClass">
+                    <a href="/staff/class/take?subcode=<%= result[0].subcode%>">+</a>
+                </div>
+                <div class="classes">
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Attendence</th>
+                        </tr>
+                        <% for( let index = 0; index < ress.length; index++ ) { %>
+                            <% var data = JSON.parse(JSON.stringify(ress[index].attend)) %>
+                            <% var mainData= JSON.parse(data) %>
+                            <tr>
+                                <td><%= mainData["date"] %></td>
+                                <td><%= mainData["time"] %></td>
+                                <td class="view"><a href="/staff/class/info?sub=<%= mainData["subjectCode"] %>&date=<%= mainData["date"] %>&time=<%= mainData["time"] %>">View</a></td>
+                            </tr>
+                        <% } %>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

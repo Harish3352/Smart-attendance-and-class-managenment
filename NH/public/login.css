@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient(to right,rgb(250, 167, 167) , rgb(170, 231, 170));
+    background-image: url(log2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 28%;
+    background-color: rgba(255, 255, 255, 0.897);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgb(219, 218, 218);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    transform: scale(0.95);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.233),inset -5px -5px 30px rgba(255, 255, 255, 0.356);
+}
+.form h1{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 29px;
+    margin: 25px;
+    border-bottom: 2px solid black;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+}
+#mainIteam{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: sans-serif;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+}
+.dept{
+    width: 270px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 2px;
+    text-align: center;
+}
+form div label{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 600px;
+}
+form div input{
+    height: 34px;
+    width: 260px;
+    background-color: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 2px;
+    padding-left: 10px;
+}
+.button{
+    padding: 15px;
+}
+.button button{
+    padding: 9px 50px;
+    background-color:black;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    transition: 0.5s linear;
+}
+.button button:hover{
+    background-color: black;
+}

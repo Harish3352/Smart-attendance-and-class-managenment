@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Detail page</title>
+    <link rel="stylesheet" href="/stdDetail.css">
+</head>
+<body>
+    <h1 class="semHead">Details of ---<span> <%= result[0].sem %></span> sem students</h1>
+    <div class="content">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Password</th>
+                <th>USN</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th class="edit">Edit - Student</th>
+            </tr>
+                <% for( let index = 0; index < result.length; index++ ) { %>
+                    <tr>
+                        <td><%- result[index].name %></td>
+                        <td><%- result[index].password %></td>
+                        <td><%- result[index].usn %></td>
+                        <td><%- result[index].email %></td>
+                        <td><%- result[index].phone %></td>
+                        <td class="edit">
+                            <a href="/admin/view-student?usn=<%- result[index].usn %>" class="view">View</a>
+                            <a href="/admin/update-student?usn=<%- result[index].usn %>" class="update">Update</a>
+                            <a href="/admin/delete-student?usn=<%- result[index].usn %>" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+        </table>
+    </div>
+</body>
+</html>
