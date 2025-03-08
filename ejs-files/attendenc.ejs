@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/attendenc.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <div class="round"><%= rest[0].name[0] %></div>
+                <div class="text">WelCome <br><%= rest[0].dept %> / Student : <%= rest[0].name %></div>
+            </div>
+            <a href="/logout" class="button">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="heading">
+                <h2>ATTENDENCE</h2>
+                <h3>
+                    <pre>
+                        Sub-Name  :  <b><%= result[0].subname %></b>
+                        Sub-Code   :  <b><%= result[0].subcode %></b>
+                        Lecture       :  <b><%= result[0].lecture %></b>
+                    </pre>
+                </h3>
+            </div>
+            <div class="contentBox">
+                <div class="left">
+                    <div class="present">
+                        <div class="presentBox" style="height:<%=Math.floor((Prst.length/(Prst.length + Arst.length))*100)%>%;"></div>
+                        <label for="presentBox">Present</label>
+                    </div>
+                    <div class="gap"></div>
+                    <div class="absent">
+                        <div class="absentBox" style="height:<%=Math.floor((Arst.length/(Prst.length + Arst.length))*100)%>%;"></div>
+                        <label for="absentBox">Absent</label>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3>
+                        Total class : <b><%= Prst.length + Arst.length %></b><br>
+                        Present : <b><%= Prst.length %></b><br>
+                        Absent : <b><%= Arst.length %></b><br>
+                    </h3>
+                    <span>AVG : <%= Math.floor((Prst.length/(Prst.length + Arst.length))*100)%>%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Detail page</title>
+    <link rel="stylesheet" href="/subject.css">
+</head>
+<body>
+    <h1 class="semHead">Details of --.-<span> <%= result[0].sem %></span> sem - Subjects</h1>
+    <div class="content">
+        <table>
+            <tr>
+                <th>Lecture</th>
+                <th>ID</th>
+                <th>SUB - Name</th>
+                <th>SUB - Code</th>
+                <th>SEM</th>
+                <th>Edit SUB</th>
+            </tr>
+                <% for( let index = 0; index < result.length; index++ ) { %>
+                    <tr>
+                        <td><%- result[index].lecture %></td>
+                        <td><%- result[index].id %></td>
+                        <td><%- result[index].subname %></td>
+                        <td><%- result[index].subcode %></td>
+                        <td><%- result[index].sem %></td>
+                        <td class="edit">
+                            <a href="/admin/subjectPage/updatesub?subcode=<%- result[index].subcode %>" class="update">Update</a>
+                            <a href="/admin/subjectPage/deletesub?subcode=<%- result[index].subcode %>" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+        </table>
+    </div>
+</body>
+</html>

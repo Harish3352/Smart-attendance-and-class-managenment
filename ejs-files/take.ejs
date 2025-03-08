@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/take.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <form method="post">
+                <div class="header">
+                    <div class="sub">
+                        <label for="subjectName">SUB Name :</label>
+                        <input type="text" name="subjectName" value="<%= result[0].subname %>" class="subjectName" required readonly>
+                    </div>
+                    <div class="lecture">
+                        <label for="lectureName">Lecture :</label>
+                        <input type="text" name="lectureName" value="<%= result[0].lecture %>" class="lectureName" required readonly>
+                    </div>
+                    <div class="semm">
+                        <label for="sem">Sem :</label>
+                        <input type="text" name="sem" value="<%= result[0].sem %>" class="sem" required readonly>
+                    </div>
+                    <div class="subCode">
+                        <label for="subjectCode">SUB Code :</label>
+                        <input type="text" name="subjectCode" value="<%= result[0].subcode %>" class="subjectCode" required readonly>
+                    </div>
+                    <div class="time">
+                        <label for="time">Time :</label>
+                        <input type="time" name="time" class="timee" required>
+                    </div>
+                    <div class="datee">
+                        <label for="datee">Date :</label>
+                        <input type="date" name="date" class="datee" required>
+                    </div>
+                </div>
+                <div class="stdData">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>USN</th>
+                            <th>Phone</th>
+                            <th class="attend">
+                                <p>Present</p>
+                                <p>Absent</p>
+                            </th>
+                        </tr>
+                            <% for( let index = 0; index < rest.length; index++ ) { %>
+                                <tr>
+                                    <td><%- rest[index].name %></td>
+                                    <td><%- rest[index].usn %></td>
+                                    <td><%- rest[index].phone %></td>
+                                    <td class="attend">
+                                        <input type="radio" name="<%- rest[index].usn %>" value="present" required>
+                                        <input type="radio" name="<%- rest[index].usn %>" value="absent" required>
+                                    </td>
+                                </tr>
+                            <% } %>
+                    </table>
+                </div>
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

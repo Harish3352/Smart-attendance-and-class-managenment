@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View students</title>
+    <link rel="stylesheet" href="/subjectPage.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <div class="round"><%= adminName[0] %></div>
+                <div class="text">WelCome <br><%= adminDept %> / Admin : <%= adminName %></div>
+            </div>
+            <a href="/logout" class="button">Logout</a>
+        </nav>
+        <div class="content">
+            <div class="heading">
+                <a href="/admin/subjectPage/addSubject"><h2>Add Subjects to<br>Respective class`s</h2></a>
+                <a href="/admin/subjectPage/addSubject"><img src="/arrow.png"></a>
+            </div>
+            <p>VIEW SUBJECTS</p>
+            <div class="iteams">
+                <a href="/admin/subjectPage/subjects?sem=3"><div class="sem3">sem - 3</div></a>
+                <a href="/admin/subjectPage/subjects?sem=4"><div class="sem3">sem - 4</div></a>
+                <a href="/admin/subjectPage/subjects?sem=5"><div class="sem3">sem - 5</div></a>
+                <a href="/admin/subjectPage/subjects?sem=6"><div class="sem3">sem - 6</div></a>
+                <a href="/admin/subjectPage/subjects?sem=7"><div class="sem3">sem - 7</div></a>
+                <a href="/admin/subjectPage/subjects?sem=8"><div class="sem3">sem - 8</div></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

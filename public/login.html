@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <h1>Login</h1>
+            <form method="post" id="myForm">
+                <span id="mainIteam">
+                    <span class="subIteam1">
+                        <label for="student">Student</label>
+                        <input type="radio" id="student" name="option" value="student" required>
+                    </span>
+                    <span class="subIteam2">
+                        <label for="admin">Admin</label>
+                        <input type="radio" id="admin" name="option" value="admin" required>
+                    </span>
+                    <span class="subIteam3">
+                        <label for="staff">Staff</label>
+                        <input type="radio" id="staff" name="option" value="staff" required>
+                    </span>
+                </span>
+                <div class="input1">
+                    <label for="name">ID / USN :</label>
+                    <input type="text" id="name" name="id" required>
+                </div>
+                <div class="input2">
+                    <label for="password">Password :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="deptinfo">
+                    <label for="dept">Department :</label>
+                    <select class="dept" id="dept" name="dept" required>
+                        <option value="CSE" >CSE</option>
+                        <option value="ECE" >ECE</option>
+                        <option value="EEE" >EEE</option>
+                        <option value="CIV" >CIV</option>
+                        <option value="MECH" >MECH</option>
+                    </select>
+                </div>
+                <div class="button">
+                    <button type="submit" form="myForm">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

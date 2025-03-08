@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/addSubject.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <h1>Update Subject</h1>
+            <form method="post">
+                <div class="lecture">
+                    <label for="lecturename">Lecture Name :</label>
+                    <input type="text" name="lecturename" id="lecturename" value="<%= result[0].lecture %>" required>
+                </div>
+                <div class="lecture">
+                    <label for="lectureid">Lecture ID :</label>
+                    <input type="text" name="lectureid" id="lectureid" value="<%= result[0].id %>" required>
+                </div>
+                <div class="subname">
+                    <label for="subname">Sub-Name :</label>
+                    <input type="text" name="subname" id="subname" value="<%= result[0].subname %>" required>
+                </div>
+                <div class="subcode">
+                    <label for="subcode">Sub-Code :</label>
+                    <input type="text" name="subcode" id="subcode" value="<%= result[0].subcode %>" required>
+                </div>
+                <div class="sem">
+                    <label for="sem">Sem : </label>
+                    <input type="text" name="sem" id="sem" value="<%= result[0].sem %>" required>
+                </div>
+                <div class="button">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
